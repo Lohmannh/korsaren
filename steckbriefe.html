@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steckbriefe & Bosse – Korsaren von Saint-Malo</title>
+    <style>
+        :root {
+            --bg-parchment: #f4e8c1;
+            --bg-parchment-dark: #e2d1a4;
+            --ocean-blue: #1b4965;
+            --ocean-dark: #0f2b3c;
+            --gold: #d4af37;
+            --crimson: #8b0000;
+            --text-dark: #2b1e10;
+            --border-wood: #5c3a21;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--ocean-dark);
+            color: var(--text-dark);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper {
+            width: 95%;
+            max-width: 900px;
+            background: var(--bg-parchment);
+            border: 8px solid var(--border-wood);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: 2px solid var(--border-wood);
+            margin-bottom: 20px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .back-btn:hover { background: #f3ce5a; }
+
+        h1 { color: var(--crimson); text-align: center; font-size: 2.5rem; margin-bottom: 25px; }
+
+        .wanted-poster {
+            background: var(--bg-parchment-dark);
+            border: 4px double var(--border-wood);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            line-height: 1.6;
+        }
+
+        .wanted-poster h2 {
+            color: var(--crimson);
+            border-bottom: 2px solid var(--border-wood);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+        }
+
+        .poster-info-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: rgba(92, 58, 33, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .reward { color: var(--ocean-blue); }
+        .cost { color: var(--crimson); }
+
+        .wanted-poster p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .hint-box {
+            background: rgba(139, 0, 0, 0.08);
+            border-left: 4px solid var(--crimson);
+            padding: 12px 15px;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .hint-box strong {
+            color: var(--crimson);
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <a href="index.html" class="back-btn">⬅️ Zurück zum Hauptmenü</a>
+        <h1>☠️ Meistgesuchte Piraten ☠️</h1>
+
+        <!-- STECKBRIEF 1 -->
+        <div class="wanted-poster">
+            <h2>STECKBRIEF 1: Mael die Eisenfaust</h2>
+            
+            <div class="poster-info-bar">
+                <span class="cost">⚔️ Herausforderungskosten: 1 Münze 🪙</span>
+                <span class="reward">🏆 BELOHNUNG: 5 Münzen 🪙</span>
+            </div>
+
+            <p><strong>GESUCHT WEGEN:</strong> Piraterie, Brandstiftung auf See, Plünderung von Handelsschiffen der Krone und unprovozierter Gewaltanwendung in der Bucht von Saint-Malo. Er befindet sich auf <strong>Feld 6</strong>.</p>
+            
+            <p><strong>HINTERGRUND & ERSCHEINUNGSBILD:</strong><br>
+            Werte Korsaren, die Bürger und der Stadtrat von Saint-Malo bitten um eure unmittelbare Hilfe! Die nahegelegenen Handelsrouten vor unserer Küste werden von einem verheerenden Schrecken heimgesucht. Kapitän Mael, unter den Seeleuten nur als „Der Feuerfresser“ berüchtigt, hat sich zu einer akuten Bedrohung entwickelt. Er ist ein riesenhafter, narbengesichtiger Mann mit einem lodernden Blick, der mehr einer wandelnden Kanone gleicht als einem gewöhnlichen Seemann.</p>
+            
+            <p>Mael greift nicht an, um zu verhandeln oder Fracht friedlich zu übernehmen. Seine Taktik ist von purer, roher Gewalt geprägt. Er segelt ein schwer bewaffnetes Kriegsschiff, dessen Breitseiten mit Brandkugeln und doppelt geladenen Kartätschen bestückt sind. Wer das Pech hat, in seine Reichweite zu geraten, erfährt bereits in den ersten Minuten des Gefechts die volle, unbarmherzige Härte seiner Breitseiten. Mael setzt alles auf eine Karte: Seine Männer stürmen mit gezogenem Säbel und brennenden Lonten die feindlichen Deckwände, um den Gegner im ersten Ansturm regelrecht zu zermalmen. Wenn seine Kanonen donnern, erzittert der Horizont. Seine Hiebe sind legendär dafür, selbst die stärksten Schilde und Schiffsrümpfe beim ersten Treffer wie Zündholz zu zersplittern.</p>
+
+            <div class="hint-box">
+                <strong>Taktischer Hinweis des Admirals:</strong><br>
+                Lasst euch von seiner schieren Zerstörungskraft nicht blendend überrumpeln! So gewaltig und tödlich seine ersten Schläge auch sind, so ungestüm und ungeduldig kämpft dieser Mann. Mael verausgabt sich und seine Mannschaft schamlos in den ersten Augenblicken der Schlacht. Wenn seine rasende Wut fehlschlägt oder ihr seinen gewaltigen Hieben standhalten könnt, geht ihm rasch die Puste aus. Er verfügt weder über den langen Atem noch über die Disziplin für ein langes, kräftezehrendes Manöver. Übersteht seinen ersten, vernichtenden Ansturm – danach wird er schnell müde und seine Formation bricht zusammen!
+            </div>
+        </div>
+
+        <!-- STECKBRIEF 2 -->
+        <div class="wanted-poster">
+            <h2>STECKBRIEF 2: Mademoiselle Anne, die Eiserne Baronin</h2>
+            
+            <div class="poster-info-bar">
+<span class="cost">⚔️ Herausforderungskosten: 3 Münzen 🪙</span>
+                <span class="reward">🏆 BELOHNUNG: 10 Münzen 🪙</span>
+            </div>
+
+            <p><strong>GESUCHT WEGEN:</strong> Illegaler Errichtung einer Piratenfestung, Kaperung königlicher Postschiffe, Erpressung von Wegzoll an der Smaragdküste.</p>
+
+            <p><strong>HINTERGRUND & ERSCHEINUNGSBILD:</strong><br>
+            Nachdem Kapitän Mael vertrieben wurde, stößt ihr an den felsigen Klippen der Smaragdküste auf eine ganz andere Art von Gefahr. Mademoiselle Anne – bekannt als die „Eiserne Baronin“ – beherrscht einen strategisch gelegenen Festungsbau hoch über den Klippen. Sie ist eine kühle, hochgebildete Taktikerin, die jeden Winkel der Küste wie ihre eigene Westentasche kennt und sich hinter massiven Schutzwallen verschanzt hat.</p>
+            
+            <p>Anne verlässt sich nicht auf wilde Wutausbrüche. Ihre Festung ist eine undurchdringliche Bastion aus massivem Granit, verstärkt durch dicke Holzpalisaden und eiserne Schutzschilde. Ihr Schiff, die <em>L'Ombre</em>, ist ebenso gebaut: Ihr Rumpf ist mit extra dickem Eichenholz und Eisenplatten verstärkt. Wer versucht, Anne anzugreifen, beißt im wahrsten Sinne des Wortes auf Granit. Eure Angriffe werden an ihren mächtigen Schilden und meterdicken Festungsmauern wirkungslos abprallen wie kleine Kieselsteine. Sie pariert jeden Hieb mit kühler Eleganz und lässt Anstürme mühelos im Sande verlaufen.</p>
+
+            <div class="hint-box">
+                <strong>Taktischer Hinweis des Admirals:</strong><br>
+                Mademoiselle Anne teilt selten schwere, vernichtende Schläge aus. Ihre Waffen sind eher bescheiden und ihre Angriffe wirken fast vorsichtig – sie greift nur an, wenn sie einen absolut sicheren Vorteil sieht. Doch unterschätzt sie nicht: Sie kann Angriff um Angriff mühelos abwehren, ohne auch nur ins Schwitzen zu geraten. Dieser Kampf wird kein schnelles Duell. Ihr müsst geduldig bleiben und Schlag um Schlag gegen ihre schier unüberwindbare Deckung führen, während sie gelassen zuschaut, wie ihr euch an ihren Mauern abarbeitet. Nur wer Ausdauer zeigt, hat eine Chance, ihren Panzer Stück für Stück zu zermürben!
+            </div>
+        </div>
+
+        <!-- STECKBRIEF 3 -->
+        <div class="wanted-poster">
+            <h2>STECKBRIEF 3: Der Seewolf von den Gefährlichen Riffen</h2>
+            
+            <div class="poster-info-bar">
+<span class="cost">⚔️ Herausforderungskosten: 5 Münzen 🪙</span>
+                <span class="reward">🏆 BELOHNUNG: 20 Münzen 🪙</span>
+            </div>
+
+            <p><strong>GESUCHT WEGEN:</strong> Schmuggel, Erpressung, Versenkung zahlreicher Expeditionsschiffe in den Nebelgewässern der Gefährlichen Riffe.</p>
+
+            <p><strong>HINTERGRUND & ERSCHEINUNGSBILD:</strong><br>
+            Ihr habt die Festung der Smaragdküste überwunden, doch der wahre Schrecken der Meere erwartet euch im dichten Nebel der Gefährlichen Riffe. Hier herrscht der berüchtigte „Seewolf“, ein zäher, schlangenartiger Piratenkapitän, der seit Jahrzehnten durch diese Gewässer kreuzt. Sein Gesicht ist vom Salzwasser gegerbt, und sein Blick verrät einen unbeugsamen, fast schon unheimlichen Überlebenswillen.</p>
+
+            <p>Der Seewolf trägt weder schwere Rüstung, noch ist sein Schiff von dickem Holz geschützt. Im Gegenteil: Seine Jacht ist leicht, fast schon zerbrechlich gebaut. Wenn eure Kanonen treffen oder eure Säbel sein Deck erreichen, zeigt sich rasch, dass seine Abwehr denkbar schwach ist. Ein einziger kräftiger Treffer setzt ihm schwer zu, da er kaum Rüstung oder Schilde besitzt, um den Schaden abzufangen.</p>
+
+            <p>Doch lasst euch von seiner scheinbaren Zerbrechlichkeit bloß nicht täuschen! Der Seewolf ist wie eine Welle, die niemals aufhört gegen die Felsen zu schlagen. Seine Ausdauer ist schier unendlich. Während andere Piraten nach wenigen Minuten erschöpft aufgeben, fängt der Seewolf gerade erst an. Er weicht euren Hieben mit flinken Wendungen aus, taucht immer wieder im Nebel ab und greift euch unaufhörlich an – wieder und wieder, Runde für Runde, ohne jemals müde zu werden. Seine einzelnen Hiebe sind nicht sonderlich stark, aber er hört einfach niemals auf zu stechen.</p>
+
+            <div class="hint-box">
+                <strong>Taktischer Hinweis des Admirals:</strong><br>
+                Ihr trefft auf einen Gegner, der euch durch reine Entschlossenheit und unendliche Zähigkeit zermürben will! Er mag leicht verwundbar sein, sobald man ihn trifft, doch er gibt niemals auf. Er wird euch in einen zähen, scheinbar endlosen Kampf verstricken, bei dem er Zug um Zug weitere Nadelstiche setzt. Bleibt wachsam, teilt eure Kräfte klug ein und nutzt jede Chance zum Treffer – denn wenn dieser Kampf zu lange dauert, wird der Seewolf euch allein durch seine unerschöpfliche Puste in die Knie zwingen!
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

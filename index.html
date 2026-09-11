@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korsaren von Saint-Malo – Jagd auf Piraten</title>
+    <style>
+        /* CSS STYLES - Spielstil (Pergament, Ozean, Gold) */
+        :root {
+            --bg-parchment: #f4e8c1;
+            --bg-parchment-dark: #e2d1a4;
+            --ocean-blue: #1b4965;
+            --ocean-dark: #0f2b3c;
+            --gold: #d4af37;
+            --gold-hover: #f3ce5a;
+            --crimson: #8b0000;
+            --text-dark: #2b1e10;
+            --border-wood: #5c3a21;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--ocean-dark);
+            background-image: radial-gradient(circle, #1b4965 0%, #0f2b3c 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Hauptcontainer im Pergament-Look */
+        .wrapper {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: var(--bg-parchment);
+            border: 8px solid var(--border-wood);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), inset 0 0 50px rgba(92, 58, 33, 0.3);
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Schmuckrahmen-Effekt */
+        .wrapper::before {
+            content: '';
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 2px dashed var(--border-wood);
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--crimson);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            margin-bottom: 5px;
+        }
+
+        header p.subtitle {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--ocean-blue);
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* Goldener Münzzähler im Header */
+        .coin-display {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--ocean-blue);
+            color: var(--gold);
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 2px solid var(--gold);
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Navigation Hauptmenü */
+        nav.main-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 25px;
+            background: linear-gradient(180deg, var(--gold) 0%, #b8860b 100%);
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 3px solid var(--border-wood);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .nav-btn:hover {
+            background: linear-gradient(180deg, var(--gold-hover) 0%, var(--gold) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .nav-btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Intro-Sektion */
+        .intro-box {
+            background: rgba(226, 209, 164, 0.6);
+            border-left: 5px solid var(--crimson);
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+            border-radius: 0 8px 8px 0;
+            line-height: 1.6;
+        }
+
+        .intro-box h2 {
+            color: var(--crimson);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            color: var(--bg-parchment-dark);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>Korsaren von Saint-Malo</h1>
+            <p class="subtitle">~ Jagd auf Piraten ~</p>
+
+            <!-- Münzanzeige für das Abenteuer -->
+           
+        </header>
+
+        <!-- Hauptnavigation zu den Unterseiten -->
+        <nav class="main-nav">
+            <a href="karte.html" class="nav-btn">🗺️ Seekarte öffnen</a>
+            <a href="steckbriefe.html" class="nav-btn">☠️ Steckbriefe & Bosse</a>
+            <a href="shop.html" class="nav-btn">⚓ Ausrüstungsshop</a>
+        </nav>
+
+        <!-- Intro- / Erklärtext für die Schüler -->
+        <div class="intro-box">
+            <h2>Willkommen an Bord, Korsar!</h2>
+            <p>
+                Die Bucht von Saint-Malo steht unter dem Beschuss furchtloser Seeräuber. 
+                Erreiche neue Level durch starke Leistungen in den Mathetests, wappne dich mit mächtiger Ausrüstung aus dem Shop 
+                und stelle dich den legendären Piratenkapitänen in der Montagsschlacht!
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Spielprojekt: Korsaren von Saint-Malo | Mathe-Rollenspiel
+    </footer>
+
+    <script>
+        // JAVASCRIPT - Verwaltung des Münzstands im Spiel
+        document.addEventListener('DOMContentLoaded', () => {
+            // Münzstand aus dem Speicher laden (Standard: 0)
+            let currentCoins = localStorage.getItem('korsaren_muenzen') || 0;
+            document.getElementById('coin-count').textContent = currentCoins;
+        });
+    </script>
+</body>
+</html>
