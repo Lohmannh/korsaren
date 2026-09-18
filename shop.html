@@ -122,26 +122,12 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.4);
         }
 
-        /* Eingabefeld für den individuellen Gegenstandsnamen */
-        .name-input {
-            margin-top: 10px;
-            width: 90%;
-            font-family: 'Georgia', serif;
-            font-size: 1.05rem;
+        /* Fester Name als Label / Überschrift */
+        .item-title {
+            margin-top: 12px;
+            font-size: 1.15rem;
             font-weight: bold;
-            text-align: center;
             color: var(--text-dark);
-            background: rgba(255, 255, 255, 0.7);
-            border: 2px solid var(--border-wood);
-            border-radius: 5px;
-            padding: 5px;
-            transition: background 0.2s, border-color 0.2s;
-        }
-
-        .name-input:focus {
-            background: #ffffff;
-            border-color: var(--crimson);
-            outline: none;
         }
 
         /* Anzeige für den Effekt / Boni */
@@ -234,20 +220,22 @@
             <div class="item-card">
                 <div class="sale-badge">SALE!</div>
                 <img src="saebel_holz.jpg" alt="Holzsäbel" onclick="openModal(this.src)">
-                <input type="text" class="name-input" id="item_1" value="Holzsäbel" onchange="saveName('item_1', this.value)">
+                <h3 class="item-title">Holzsäbel</h3>
                 <div class="effect">Angriff +20</div>
+                <div class="price">Preis: <span class="old-price">3 Münzen</span> <span class="sale-price">2 Münzen 🪙</span></div>
+            </div>
+		<!-- Schild MIT ANGEBOTSSCHILD -->
+            <div class="item-card">
+		<div class="sale-badge">SALE!</div>
+                <img src="schild_holz.jpg" alt="Holzschild" onclick="openModal(this.src)">
+                <h3 class="item-title">Holzschild</h3>
+                <div class="effect">Verteidigung +20</div>
                 <div class="price">Preis: <span class="old-price">3 Münzen</span> <span class="sale-price">2 Münzen 🪙</span></div>
             </div>
 
             <div class="item-card">
-                <img src="schild_holz.jpg" alt="Holzschild" onclick="openModal(this.src)">
-                <input type="text" class="name-input" id="item_2" value="Holzschild" onchange="saveName('item_2', this.value)">
-                <div class="effect">Verteidigung +20</div>
-                <div class="price">Preis: 3 Münzen 🪙</div>
-            </div>
-            <div class="item-card">
                 <img src="saebel_einfach.jpg" alt="Einfacher Säbel" onclick="openModal(this.src)">
-                <input type="text" class="name-input" id="item_3" value="Einfacher Säbel" onchange="saveName('item_3', this.value)">
+                <h3 class="item-title">Einfacher Säbel</h3>
                 <div class="effect">Angriff +60</div>
                 <div class="price">Preis: 5 Münzen 🪙</div>
             </div>
@@ -258,15 +246,32 @@
         <div class="shop-grid">
             <div class="item-card">
                 <img src="stiefel_einfach_w.jpg" alt="Lederstiefel_1" onclick="openModal(this.src)">
-                <input type="text" class="name-input" id="item_4" value="Lederstiefel_1" onchange="saveName('item_4', this.value)">
+                <h3 class="item-title">Lederstiefel_1</h3>
                 <div class="effect">Verteidigung +20</div>
                 <div class="price">Preis: 3 Münzen 🪙</div>
             </div>
             <div class="item-card">
                 <img src="stiefel_einfach_m.jpg" alt="Lederstiefel_2" onclick="openModal(this.src)">
-                <input type="text" class="name-input" id="item_5" value="Lederstiefel_2" onchange="saveName('item_5', this.value)">
+                <h3 class="item-title">Lederstiefel_2</h3>
                 <div class="effect">Verteidigung +20</div>
                 <div class="price">Preis: 3 Münzen 🪙</div>
+            </div>
+        </div>
+
+        <!-- KATEGORIE: Schmuck & Amulette -->
+        <h2 class="category-title">Schmuck & Amulette</h2>
+        <div class="shop-grid">
+            <div class="item-card">
+                <img src="halskette_einfach.jpg" alt="Einfache Halskette" onclick="openModal(this.src)">
+                <h3 class="item-title">Einfache Halskette</h3>
+                <div class="effect">Angriff +10</div>
+                <div class="price">Preis: 2 Münzen 🪙</div>
+            </div>
+            <div class="item-card">
+                <img src="ring_einfach.jpg" alt="Einfacher Ring" onclick="openModal(this.src)">
+                <h3 class="item-title">Einfacher Ring</h3>
+                <div class="effect">Verteidigung +10</div>
+                <div class="price">Preis: 2 Münzen 🪙</div>
             </div>
         </div>
 
@@ -274,12 +279,12 @@
         <h2 class="category-title">Kosmetik & Erscheinungsbild</h2>
         <div class="shop-grid">
             <div class="item-card">
-                <input type="text" class="name-input" id="item_6" value="Haare anmalen" onchange="saveName('item_6', this.value)">
+                <h3 class="item-title">Haare anmalen</h3>
                 <div class="effect">Optische Anpassung</div>
                 <div class="price">Preis: 1 Münze 🪙</div>
             </div>
             <div class="item-card">
-                <input type="text" class="name-input" id="item_7" value="Korsaren-Narbe" onchange="saveName('item_7', this.value)">
+                <h3 class="item-title">Korsaren-Narbe</h3>
                 <div class="effect">Optische Anpassung</div>
                 <div class="price">Preis: 1 Münze 🪙</div>
             </div>
@@ -302,22 +307,6 @@
         function closeModal() {
             document.getElementById("imageModal").style.display = "none";
         }
-
-        // Namen im Browser-Speicher (LocalStorage) sichern
-        function saveName(itemId, newName) {
-            localStorage.setItem('korsaren_name_' + itemId, newName);
-        }
-
-        // Gespeicherte Namen beim Laden der Seite wiederherstellen
-        document.addEventListener('DOMContentLoaded', () => {
-            const inputs = document.querySelectorAll('.name-input');
-            inputs.forEach(input => {
-                const savedName = localStorage.getItem('korsaren_name_' + input.id);
-                if (savedName) {
-                    input.value = savedName;
-                }
-            });
-        });
     </script>
 
 </body>
